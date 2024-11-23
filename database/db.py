@@ -1,8 +1,8 @@
 import pymysql
 
-db_host = 'db-aws-290.c78ismu8wteb.us-east-1.rds.amazonaws.com'
-db_user = 'jonier'
-db_passw = '12345678'
+db_host = 'dbjose1.cvg8emksavzi.us-east-2.rds.amazonaws.com'
+db_user = 'Jose'
+db_passw = 'Aixa93414L'
 
 try:
     connection = pymysql.connect(
@@ -16,7 +16,7 @@ except Exception as err:
     connection = None
 
 def add_user(id, name, lastname, birthday):
-    instruction_sql = "INSERT INTO db_users.users(id, name, lastname, birthday) VALUES ("+id+", '"+name+"', '"+lastname+"', '"+birthday+"')"
+    instruction_sql = "INSERT INTO Registro.Register(id, nombre, lastname, Birthday) VALUES ("+id+", '"+name+"', '"+lastname+"', '"+birthday+"')"
     try:
         cursor = connection.cursor()
         cursor.execute(instruction_sql)

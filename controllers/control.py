@@ -1,6 +1,6 @@
 from database.db import *
 from flask import Flask, render_template, request, jsonify
-from controllers.admin_s3 import *
+#from controllers.admin_s3 import *
 
 def func_home_func():
     return render_template("home.html")
@@ -17,7 +17,7 @@ def func_register_render_func():
     birthday = data["birthday"]
     photo = file["photo"]
     add_user(id, name, lastname, birthday)
-    upload_file_s3(photo, id)
+    #upload_file_s3(photo, id)
     return "The user was added"
 
 def func_consult_page_func():
